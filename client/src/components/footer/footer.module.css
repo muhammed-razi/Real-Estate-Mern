@@ -1,0 +1,25 @@
+.col {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.loc{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: navy;
+    margin-top: 3rem;
+    color: white;
+}
+
+.color{
+    color: white;
+}

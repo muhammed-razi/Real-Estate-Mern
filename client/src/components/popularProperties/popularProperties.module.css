@@ -1,0 +1,134 @@
+.container {
+  min-height: 100vh;
+  max-height: 100%;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.wrapper {
+  max-width: 1180px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.titles {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.titles>h5 {
+  color: #777;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.titles>h2 {
+  color: #333;
+  font-size: 28px;
+}
+
+.properties {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 3rem;
+}
+
+.property {
+  width: 30%;
+  height: 300;
+  background: #07182E;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px; 
+}
+
+.property:hover img {
+  transform: scale(1.1);
+}
+
+.properties> .property> img {
+  position: relative;
+  height: 300px;
+  width: 50%;
+  object-fit: cover;
+  transition: 150ms all;
+  cursor: pointer;
+}
+
+.properties>.property>img:hover {
+  transform: rotate(0);
+}
+
+.properties>.property>img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #555;
+  width: 100%;
+  height: 100%;
+}
+
+.property>h5 {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 20px;
+  color: #9ae649;
+  text-align: center;
+}
+
+.property>.quantity {
+  position: absolute;
+  bottom: 1rem;
+  left: 12rem;
+  color: #fff;
+  font-size: 20px;
+  background-color: navy;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+}
+
+.property:hover{
+  letter-spacing: 1px;
+  background-color: rgb(0, 0, 0);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(0, 49, 224) 0px 7px 29px 0px;
+  text-decoration: none;
+}
+
+
+
+.property:hover>.quantity {
+  transform: rotate(1);
+}
+
+/* RESPONSIVEE */
+@media only screen and (max-width: 992px) {
+  .properties {
+    justify-content: center;
+  }
+
+  .properties>.property>img {
+    width: 250px;
+  }
+
+  .property {
+    width: 50%
+  }
+
+  .container {
+    margin-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .property {
+    width: 65%
+  }
+}
